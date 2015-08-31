@@ -39,7 +39,7 @@ You could use a client
 
 ```ruby
 client = YoudaoFanyiAPI::Client.new(key: YOUR_KEY, keyfrom: YOUR_KEYFROM)
-puts client.t('ruby')
+puts client.t('ruby')['basic']['explains']
 # n. 红宝石；红宝石色
 # adj. 红宝石色的
 # ...
