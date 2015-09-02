@@ -9,8 +9,8 @@ module YoudaoFanyiAPI
       @options = YoudaoFanyiAPI.options.merge(user_options)
     end
 
-    def translate(text)
-      http_response = get(text)
+    def translate(text, optional = {})
+      http_response = get(text, optional)
       json_response = JSON.parse(http_response)
     end
 
@@ -22,13 +22,13 @@ module YoudaoFanyiAPI
       h.collect { |key, val| "#{key}=#{val}" }.join('&')
     end
 
-    def uri(text)
+    def uri(text, optional)
       escaped_text = URI.escape(text)
-      URI(PREFIX + post_form(@options.merge(q: escaped_text)))
+      URI(PREFIX + post_form(@options.merge(q: escaped_text).merge(optional)))
     end
 
-    def get(text)
-      query = uri(text)
+    def get(text, optional)
+      query = uri(text, optional)
       Net::HTTP.get(query)
     end
   end

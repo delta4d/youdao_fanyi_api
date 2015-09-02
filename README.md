@@ -46,8 +46,9 @@ puts client.t('ruby')['basic']['explains']
 ```
 
 You can also use `t` method, which is an alias of `translate`. The `translate`
-method returns a JSON object, you can find more details from [here][api].
-
+method returns a hash, you can find more details from [here][api].
+`translate` also has a second optional argument,
+using as `client.t('hello', only: true)`, which will only show dictionay result.
 
 ## Contributing
 
