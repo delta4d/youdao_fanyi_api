@@ -1,0 +1,4 @@
+lib/youdao_fanyi_api.rb be85c23ed2d21fe1f973d94a8d041d95bf92057b
+lib/youdao_fanyi_api/client.rb cb22a7abf0736e4d5ccb1815d9e10a37af6f2888
+lib/youdao_fanyi_api/version.rb 0b1a82cb9943077f55d5205e3a838216338f0419
+lib/youdao_fanyi_api/configuration.rb 31a177ed96dd0ac222934bb9f254ad0775b412fb
